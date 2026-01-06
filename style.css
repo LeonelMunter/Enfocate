@@ -1,668 +1,276 @@
-/* ==========================================
-   1. VARIABLES Y CONFIGURACIÓN GENERAL
-   ========================================== */
+/* =========================
+   VARIABLES
+========================= */
 :root {
-    --primary: #14bf98;       /* Color principal (Verde Enfócate) */
-    --primary-dark: #0f9676;  /* Verde más oscuro para hover */
-    --text-body: #555555;     /* Gris oscuro para texto normal */
-    --text-heading: #333333;  /* Casi negro para títulos */
-    --bg-light: #f9fafc;      /* Fondo gris muy suave */
-    --white: #ffffff;
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Open Sans', sans-serif;
+  --primary: #3b82f6;
+  --secondary: #1e293b;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --radius: 14px;
 }
 
+/* =========================
+   GLOBAL
+========================= */
 body {
-    font-family: var(--font-body);
-    color: var(--text-body);
-    font-size: 1rem;
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evita scroll horizontal no deseado */
+  font-family: "Open Sans", sans-serif;
+  color: var(--secondary);
+  background-color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    color: var(--text-heading);
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 2.25rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-h2 span {
-    color: var(--primary);
-}
-
-p {
-    margin-bottom: 1.5rem;
-}
-
-a {
-    color: var(--text-body);
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-a:hover {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-ul.list-unstyled li {
-    margin-bottom: 0.5rem;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .section-title {
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    text-align: center;
-    display: block;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 
-/* Espaciado estándar para secciones */
-.basic-1, .cards-1, .cards-2, .filter, .slider, .form-2 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-
-/* Botones Genéricos */
-.btn-outline-reg {
-    border: 2px solid var(--primary);
-    background-color: transparent;
-    color: var(--primary);
-    padding: 0.75rem 2rem;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.btn-outline-reg:hover {
-    background-color: var(--primary);
-    color: var(--white);
-}
-
-/* ==========================================
-   2. NAVBAR (MENÚ SUPERIOR)
-   ========================================== */
+/* =========================
+   NAVBAR
+========================= */
 .navbar-custom {
-    background-color: var(--primary-dark);
-    padding: 0.75rem 1.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
 }
 
-.navbar-custom .navbar-brand.logo-image img {
-    width: 110px;
-    height: auto;
+.navbar-brand img {
+  height: 42px;
 }
 
-.navbar-custom .nav-link {
-    color: var(--white) !important;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
-    text-transform: uppercase;
+.navbar-nav .nav-link {
+  font-weight: 600;
+  color: #ffffff !important;
+  margin: 0 0.75rem;
 }
 
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link.active {
-    color: #d1f5ea !important; /* Verde muy claro */
+.navbar-nav .nav-link:hover {
+  color: var(--primary) !important;
 }
 
-/* Iconos redes sociales en Navbar */
-.social-icons {
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-}
-.social-icons .fa-stack {
-    font-size: 0.8rem;
-    margin-left: 0.25rem;
-    transition: transform 0.3s;
-}
-.social-icons .fa-stack:hover {
-    transform: scale(1.15);
-}
-.social-icons .hexagon {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.2);
-    border-radius: 50%; /* Hacemos círculo en vez de hexágono para modernizar */
-}
-.social-icons .fa-stack-1x {
-    color: var(--white);
-}
-
-/* Menú hamburguesa */
+/* SVG toggler */
 .navbar-toggler {
-    border: none;
-    color: var(--white);
-    font-size: 1.5rem;
-}
-.navbar-toggler:focus {
-    outline: none;
+  border: none;
 }
 
-/* ==========================================
-   3. HEADER (PORTADA)
-   ========================================== */
+.navbar-toggler-awesome {
+  width: 26px;
+  height: 26px;
+  filter: invert(1);
+}
+
+/* Social icons navbar */
+.social-icons img {
+  width: 18px;
+  margin-left: 10px;
+  opacity: 0.85;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* =========================
+   HERO
+========================= */
 .header {
-    /* IMPORTANTE: Asegúrate de tener una imagen llamada 'header-bg.jpg' en la carpeta images 
-       o cambia el nombre aquí */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/header-background.jpg') center center no-repeat;
-    background-size: cover;
-    min-height: 80vh;
-    padding-top: 8rem; 
-    padding-bottom: 4rem;
-    text-align: center;
-    position: relative;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a
+  );
+  display: flex;
+  align-items: center;
 }
 
 .header .text-container {
-    margin-top: 4rem;
-    color: var(--white);
+  text-align: center;
+  color: #ffffff;
 }
 
 .header h1 {
-    color: var(--white);
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
 
-/* ==========================================
-   4. INTRO / NOSOTROS (Basic-1)
-   ========================================== */
-#intro {
-    background-color: var(--white);
+.header p {
+  font-size: 1.1rem;
+  color: #cbd5f5;
 }
 
-#intro .text-container {
-    margin-top: 1rem;
+/* =========================
+   INTRO
+========================= */
+.basic-1 {
+  padding: 5rem 0;
 }
 
-#intro .section-title {
-    text-align: left; /* Alineado a la izquierda en esta sección */
+.basic-1 .image-container img {
+  border-radius: var(--radius);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-#intro h2 {
-    text-align: left;
+/* =========================
+   CARDS ICONOS
+========================= */
+.cards-1 .card,
+.cards-2 .card {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.image-container img {
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    max-width: 100%;
+.cards-1 .card:hover,
+.cards-2 .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 70px;
+  margin: 2rem auto 1rem;
+}
+
+/* =========================
+   SERVICES ICONS
+========================= */
+.card-image {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.card-image img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   ACCORDION
+========================= */
+.accordion-title {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.circle-numbering {
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+.element-item img {
+  border-radius: var(--radius);
+}
+
+.element-item-overlay {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: var(--radius);
+}
+
+/* =========================
+   SLIDERS
+========================= */
+.slider .card {
+  border-radius: var(--radius);
+}
+
+.testimonial-author {
+  font-weight: 700;
 }
 
 .testimonial-text {
-    font-style: italic;
-    color: #666;
-    margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--gray);
 }
 
-/* ==========================================
-   5. DESCRIPTION CARDS (Cards-1)
-   ========================================== */
-.cards-1 {
-    background-color: var(--bg-light);
-    text-align: center;
+/* =========================
+   CONTACT
+========================= */
+.form-2 {
+  background: #f1f5f9;
+  padding: 5rem 0;
 }
 
-.cards-1 .card {
-    background: transparent;
-    border: none;
-    margin-bottom: 2rem;
+.form-2 ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-.cards-1 .card-img-top {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem auto;
-    object-fit: contain;
+.form-2 ul img {
+  width: 20px;
+  margin-right: 10px;
 }
 
-.cards-1 .card-body {
-    padding: 0 1rem;
-}
-
-/* ==========================================
-   6. ACORDEÓN (Details)
-   ========================================== */
-.accordion {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-color: var(--white);
-}
-
-.accordion-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.accordion .item {
-    border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 1rem;
-}
-
-/* El encabezado clickeable */
-.accordion .accordion-title {
-    display: block;
-    padding: 1rem 0;
-    cursor: pointer;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--text-heading);
-    font-size: 1.1rem;
-    position: relative;
-}
-
-.accordion .accordion-title:hover {
-    color: var(--primary);
-}
-
-.accordion .circle-numbering {
-    display: inline-block;
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    color: var(--white);
-    text-align: center;
-    margin-right: 15px;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.accordion-body {
-    padding-left: 3.5rem; /* Alineado con el título */
-    padding-bottom: 1.5rem;
-    color: var(--text-body);
-}
-
-.accordion-body ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.accordion-body ul li:before {
-    content: "•";
-    color: var(--primary);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-/* ==========================================
-   7. SERVICIOS / MODALIDAD (Cards-2)
-   ========================================== */
-.cards-2 {
-    background-color: var(--bg-light);
-}
-
-.cards-2 .card {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-    background-color: var(--white);
-    margin-bottom: 2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden; /* Para que la imagen respete el borde redondeado */
-}
-
-.cards-2 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.cards-2 .card-image img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.cards-2 .card-body {
-    padding: 2rem;
-}
-
-/* ==========================================
-   8. PROYECTOS / CURSOS (Filter Grid)
-   ========================================== */
-.filter {
-    background-color: var(--white);
-}
-
-/* Grid layout básico */
-.grid {
-    margin-top: 3rem;
-}
-
-/* Estilo de cada item del grid */
-.element-item {
-    position: relative;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    overflow: hidden;
-    /* Ancho por defecto para escritorio */
-    width: 350px; 
-    height: 250px;
-}
-
-.element-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-    display: block;
-}
-
-/* Overlay verde al pasar el mouse */
-.element-item-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(20, 191, 152, 0.85); /* Verde con transparencia */
-    opacity: 0;
-    transition: opacity 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.element-item-overlay span {
-    color: var(--white);
-    font-weight: 700;
-    font-size: 1.2rem;
-    border: 2px solid var(--white);
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-}
-
-.element-item:hover .element-item-overlay {
-    opacity: 1;
-}
-
-.element-item:hover img {
-    transform: scale(1.1); /* Efecto zoom suave */
-}
-
-/* LIGHTBOX (Pop-up de los cursos) */
-.lightbox-basic {
-    background: #fff;
-    max-width: 800px;
-    margin: 40px auto;
-    position: relative;
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: left;
-}
-
-.lightbox-basic img {
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-.lightbox-basic .btn-outline-reg.as-button {
-    margin-top: 1rem;
-    display: inline-block;
-    text-align: center;
-}
-
-button.mfp-close.x-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    color: #333;
-}
-
-/* ==========================================
-   9. SLIDER / NUESTRO EQUIPO Y TESTIMONIOS
-   ========================================== */
-.slider {
-    background-color: var(--bg-light);
-    padding-bottom: 6rem;
-}
-
-.slider .p-heading {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
-}
-
-/* Contenedor de la tarjeta del slider */
-.card-slider .card {
-    border: none;
-    background: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    padding: 2rem;
-    text-align: center;
-    height: 100%; /* Igualar alturas */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-slider .card-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    object-fit: cover;
-    border: 3px solid var(--primary);
-}
-
-.card-slider .testimonial-author {
-    font-weight: 700;
-    color: var(--text-heading);
-    margin-bottom: 0.25rem;
-    font-family: var(--font-heading);
-}
-
-.card-slider .testimonial-subtitle {
-    font-size: 0.85rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.card-slider .testimonial-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-/* Flechas de Navegación Swiper */
-.swiper-button-prev,
-.swiper-button-next {
-    color: var(--primary) !important;
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-/* ==========================================
-   10. CONTACTO (Form-2)
-   ========================================== */
-#contact {
-    background-color: var(--white);
-}
-
-#contact .text-container {
-    margin-bottom: 3rem;
-}
-
-#contact h2 {
-    text-align: left;
-}
-
-#contact .list-unstyled li {
-    margin-bottom: 10px;
-}
-
-#contact .list-unstyled i {
-    color: var(--primary);
-    margin-right: 10px;
-    font-size: 1.1rem;
-}
-
-/* Formulario */
 .form-control-input,
 .form-control-textarea {
-    width: 100%;
-    padding: 12px 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    background-color: #fcfcfc;
-    font-size: 0.9rem;
-    transition: border-color 0.3s;
-}
-
-.form-control-input:focus,
-.form-control-textarea:focus {
-    border-color: var(--primary);
-    outline: none;
-}
-
-.form-control-textarea {
-    height: 150px;
-    resize: none;
+  border-radius: var(--radius);
+  border: 1px solid #cbd5e1;
 }
 
 .form-control-submit-button {
-    display: inline-block;
-    width: 100%;
-    background-color: var(--primary);
-    color: var(--white);
-    font-weight: 700;
-    border: none;
-    border-radius: 30px;
-    padding: 1rem 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-transform: uppercase;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: var(--radius);
+  font-weight: 700;
 }
 
 .form-control-submit-button:hover {
-    background-color: var(--primary-dark);
+  background: #2563eb;
 }
 
-/* Checkbox términos */
-.checkbox {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
-}
-.checkbox input {
-    margin-right: 5px;
-}
-
-/* ==========================================
-   11. COPYRIGHT / FOOTER
-   ========================================== */
-.copyright {
-    background-color: var(--primary-dark);
-    padding: 1.5rem 0;
-    text-align: center;
-}
-
-.copyright p, .copyright a {
-    color: rgba(255,255,255,0.8);
-    font-size: 0.85rem;
-    margin: 0;
-}
-
-.copyright a:hover {
-    color: var(--white);
-    text-decoration: underline;
-}
-
-/* ==========================================
-   12. PRELOADER (Spinner)
-   ========================================== */
+/* =========================
+   LOADER
+========================= */
 .spinner-wrapper {
-    position: fixed;
-    z-index: 999999;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #ffffff;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.spinner {
-    width: 70px;
-    text-align: center;
+/* =========================
+   FOOTER
+========================= */
+.copyright {
+  background: var(--dark);
+  color: #cbd5f5;
 }
 
-.spinner > div {
-    width: 18px;
-    height: 18px;
-    background-color: var(--primary);
-    border-radius: 100%;
-    display: inline-block;
-    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+.copyright a {
+  color: var(--primary);
 }
 
-.spinner .bounce1 { animation-delay: -0.32s; }
-.spinner .bounce2 { animation-delay: -0.16s; }
-
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% { transform: scale(0); }
-  40% { transform: scale(1.0); }
-}
-
-/* ==========================================
-   13. MEDIA QUERIES (RESPONSIVE)
-   ========================================== */
-@media (min-width: 1200px) {
-    /* Ajustes para pantallas muy grandes */
-    .header h1 { font-size: 3.5rem; }
-}
-
-@media (max-width: 992px) {
-    /* Tablet horizontal / Laptop pequeña */
-    .header { min-height: 60vh; padding-top: 7rem; }
-    .header h1 { font-size: 2.5rem; }
-    .element-item { width: 45%; } /* Grid de 2 columnas */
-    .accordion-container { max-width: 100%; }
-}
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
-    /* Celulares y Tablets verticales */
-    .navbar-custom { background-color: var(--primary-dark); padding: 0.5rem 1rem; }
-    .header { padding-top: 6rem; padding-bottom: 3rem; }
-    .header h1 { font-size: 2rem; }
-    
-    /* El grid se vuelve de 1 sola columna */
-    .element-item { width: 100%; left: 0 !important; top: auto !important; position: relative !important; margin-bottom: 1.5rem; }
-    .grid { height: auto !important; }
-    
-    #intro .text-container { margin-bottom: 2rem; text-align: center; }
-    #intro .section-title, #intro h2 { text-align: center; }
-    
-    #contact h2 { text-align: center; }
-    #contact .section-title { text-align: center; }
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .navbar-brand img {
+    height: 36px;
+  }
 }
