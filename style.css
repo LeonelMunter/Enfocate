@@ -179,9 +179,204 @@ a {
   color: var(--light-color);
   margin-bottom: 2rem;
 }
+/* =====================
+   SECCIÓN INSTITUTO (ROOT)
+===================== */
+#instituto {
+    background-color: #ffffff;
+    padding-bottom: 0; /* El acordeón cerrará la sección */
+}
+
+/* 1. INTRO / MISIÓN (Diseño Limpio) */
+.basic-1 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.basic-1 .section-title {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.basic-1 h2 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+.testimonial-text {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #4a4a4a;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--primary-color);
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.03);
+}
+
+.basic-1 .image-container img {
+    width: 100%;
+    border-radius: var(--radius);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.basic-1 .image-container img:hover {
+    transform: scale(1.02);
+}
+
+/* 2. CARDS DE BENEFICIOS (Flexibilidad) */
+.cards-1 {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+}
+
+.cards-1 .col-lg-12 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cards-1 .card {
+    border: none;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cards-1 .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+}
+
+.cards-1 .card-img-top {
+    width: 70px; /* Tamaño optimizado para iconos */
+    margin-bottom: 25px;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+
+.cards-1 .card-body h5 {
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cards-1 .card-body p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 3. ACORDEÓN (Área de Detalles) */
+.accordion {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--secondary-color);
+    color: #fff;
+    margin-top: 50px;
+}
+
+.area-1 {
+    flex: 1;
+    min-height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('images/details-background.jpg') center/cover;
+}
+
+.area-2 {
+    flex: 1;
+    padding: 80px 60px;
+    background: var(--secondary-color);
+}
+
+.area-2 h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.accordion-container .item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 20px;
+}
+
+.circle-numbering {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.accordion-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.accordion-title:hover {
+    color: var(--primary-color);
+}
+
+.accordion-body {
+    padding: 20px 0 0 53px;
+    color: #b0b0b0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.accordion-body ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.accordion-body ul li {
+    margin-bottom: 10px;
+}
+
+.accordion-body ul li::before {
+    content: "→";
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 991px) {
+    .area-1 {
+        display: none; /* Oculta imagen lateral en tablets para dar espacio al texto */
+    }
+    .area-2 {
+        padding: 60px 30px;
+    }
+    .basic-1 h2 {
+        font-size: 2.2rem;
+    }
+    .cards-1 .col-lg-12 {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* =====================
-   ABOUT / INSTITUTO
+   ABOUT / MODALIDAD
 ===================== */
 .about {
   display: grid;
