@@ -234,68 +234,146 @@ a {
 }
 
 /* =====================
-   AREAS / ICONOS (Sección dentro de About)
+   ABOUT / INSTITUTO
 ===================== */
-.about article:last-of-type {
-  grid-column: 1 / -1; /* Hace que los iconos ocupen todo el ancho inferior */
-  margin-top: 2rem;
+.about {
+  display: grid;
+  /* Proporción de la imagen respecto al texto como en la captura */
+  grid-template-columns: 1fr 1fr;
+  gap: 0; /* Unimos las secciones para un look más moderno */
+  align-items: stretch;
+  background: #fff;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  margin: 4rem auto;
 }
 
-.about article h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 2rem;
+/* Columna de Texto */
+.about article:first-child {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about h1 {
+  font-size: 3rem;
   color: var(--secondary-color);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.about h5 {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+  width: fit-content;
+}
+
+.about p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.about blockquote {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin: 1rem 0 2rem 0;
+    font-style: italic;
+}
+
+/* Columna de Imagen (Estilo Hero) */
+.about article:nth-child(2) {
+  position: relative;
+  min-height: 450px;
+}
+
+.gray-scale {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto hace que se vea como fondo de la mitad de la sección */
+  filter: grayscale(100%) brightness(0.7); /* Estilo sobrio de la imagen */
+  border-radius: 0; /* Quitamos radio interno para que pegue al borde */
+  transition: var(--transition);
+}
+
+.about article:nth-child(2):hover .gray-scale {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* =====================
+   AREAS / ICONOS
+===================== */
+.about article:last-child {
+  grid-column: 1 / -1;
+  background: #f9f9f9; /* Color suave de fondo para separar */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
 }
 
 .skillIconsContainer {
   display: grid;
-  /* Ajuste de columnas para que los iconos no se vean gigantes */
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 2rem;
-  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .skillIcon {
-  background: var(--white-color, #fff);
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  transition: var(--transition);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border: 1px solid transparent;
+  gap: 10px;
+  padding: 1rem;
+  transition: var(--transition);
 }
 
 .skillIcon img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  width: 60px;
+  height: 60px;
+  transition: var(--transition);
 }
 
+/* Efecto de color de Enfócate al pasar el mouse */
 .skillIcon:hover {
   transform: translateY(-10px);
-  background: var(--primary-color);
-  border-color: var(--primary-color);
 }
 
-/* Cambio de color de los iconos al hacer hover (si son SVG) */
 .skillIcon:hover img {
-  filter: brightness(0) invert(1);
+  filter: drop-shadow(0 0 8px var(--primary-color));
 }
 
-/* Ajustes para móviles */
-@media (max-width: 768px) {
+/* Mobile Responsive */
+@media (max-width: 992px) {
   .about {
     grid-template-columns: 1fr;
-    text-align: center;
   }
-
-  .skillIconsContainer {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 1rem;
+  .about article:first-child {
+    padding: 2rem;
+  }
+  .about article:nth-child(2) {
+    height: 300px;
+    order: -1; /* Imagen arriba en móviles */
   }
 }
 
