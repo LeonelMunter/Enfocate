@@ -1,276 +1,361 @@
-/* =========================
+/* =====================
    VARIABLES
-========================= */
+===================== */
 :root {
-  --primary: #3b82f6;
-  --secondary: #1e293b;
-  --dark: #0f172a;
-  --light: #f8fafc;
-  --gray: #64748b;
-  --radius: 14px;
+  --primary-color: #d90062;
+  --secondary-color: #111;
+  --light-color: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-medium: #dddddd;
+  --text-color: #333;
+  --max-width: 1200px;
+  --radius: 20px;
+  --transition: 0.3s ease;
 }
 
-/* =========================
-   GLOBAL
-========================= */
+/* =====================
+   RESET
+===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
-  color: var(--secondary);
-  background-color: #ffffff;
+  margin: 0;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.none {
+  display: none;
+}
+
+/* =====================
+   UTILIDADES
+===================== */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.section {
+  padding: 4rem 1rem;
 }
 
 .section-title {
-  color: var(--primary);
+  text-align: center;
+  font-size: 2.3rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
   font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  transition: var(--transition);
 }
 
-/* =========================
-   NAVBAR
-========================= */
-.navbar-custom {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(8px);
+.btn:hover {
+  background-color: #b00050;
+  transform: translateY(-2px);
 }
 
-.navbar-brand img {
-  height: 42px;
+.bg-gray-light {
+  background-color: var(--gray-light);
 }
 
-.navbar-nav .nav-link {
-  font-weight: 600;
-  color: #ffffff !important;
-  margin: 0 0.75rem;
-}
-
-.navbar-nav .nav-link:hover {
-  color: var(--primary) !important;
-}
-
-/* SVG toggler */
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-awesome {
-  width: 26px;
-  height: 26px;
-  filter: invert(1);
-}
-
-/* Social icons navbar */
-.social-icons img {
-  width: 18px;
-  margin-left: 10px;
-  opacity: 0.85;
-  transition: transform 0.2s, opacity 0.2s;
-}
-
-.social-icons img:hover {
-  transform: scale(1.15);
-  opacity: 1;
-}
-
-/* =========================
-   HERO
-========================= */
+/* =====================
+   HEADER
+===================== */
 .header {
+  position: sticky;
+  top: 0;
+  background-color: var(--light-color);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu a {
+  font-weight: 600;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn img {
+  width: 26px;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero-image {
   min-height: 100vh;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: var(--hero-attachment);
+}
+
+.hero-image-opacity {
+  min-height: inherit;
   background: linear-gradient(
-    135deg,
-    #020617,
-    #0f172a
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)
   );
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.header .text-container {
+.hero-image-content {
   text-align: center;
-  color: #ffffff;
+  max-width: 800px;
+  padding: 1rem;
 }
 
-.header h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
+.hero-image-title {
+  font-size: 3rem;
+  color: var(--light-color);
+  margin-bottom: 2rem;
 }
 
-.header p {
-  font-size: 1.1rem;
-  color: #cbd5f5;
+/* =====================
+   ABOUT / INSTITUTO
+===================== */
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  align-items: center;
 }
 
-/* =========================
-   INTRO
-========================= */
-.basic-1 {
-  padding: 5rem 0;
+.about h1 {
+  font-size: 2.4rem;
+  color: var(--secondary-color);
 }
 
-.basic-1 .image-container img {
+.about h5 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  margin-bottom: 1.2rem;
+}
+
+.gray-scale {
+  filter: grayscale(100%);
   border-radius: var(--radius);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================
-   CARDS ICONOS
-========================= */
-.cards-1 .card,
-.cards-2 .card {
-  border: none;
+/* =====================
+   AREAS / ICONOS
+===================== */
+.skillIconsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skillIcon {
+  background: var(--light-color);
+  padding: 1.2rem;
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: var(--transition);
 }
 
-.cards-1 .card:hover,
-.cards-2 .card:hover {
+.skillIcon:hover {
+  transform: translateY(-5px);
+}
+
+/* =====================
+   CURSOS
+===================== */
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--light-color);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  transition: var(--transition);
+}
+
+.service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
 }
 
-.card-img-top {
-  width: 70px;
-  margin: 2rem auto 1rem;
+.service-card img {
+  width: 55px;
+  margin: 0 auto 1.5rem;
 }
 
-/* =========================
-   SERVICES ICONS
-========================= */
-.card-image {
-  text-align: center;
-  padding-top: 2rem;
-}
-
-.card-image img {
-  width: 80px;
+.service-card h3 {
   margin-bottom: 1rem;
+  color: var(--secondary-color);
 }
 
-/* =========================
-   ACCORDION
-========================= */
-.accordion-title {
-  font-weight: 600;
-  color: var(--secondary);
+/* =====================
+   METODOLOGÍA
+===================== */
+.portfolio .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-.circle-numbering {
-  background: var(--primary);
-  color: #ffffff;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
-
-/* =========================
-   PROJECT GRID
-========================= */
-.element-item img {
+.portfolio-card {
+  position: relative;
   border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
-.element-item-overlay {
-  background: rgba(15, 23, 42, 0.7);
-  border-radius: var(--radius);
+.portfolio-card img {
+  height: 100%;
+  object-fit: cover;
 }
 
-/* =========================
-   SLIDERS
-========================= */
-.slider .card {
-  border-radius: var(--radius);
-}
-
-.testimonial-author {
-  font-weight: 700;
-}
-
-.testimonial-text {
-  font-size: 0.95rem;
-  color: var(--gray);
-}
-
-/* =========================
-   CONTACT
-========================= */
-.form-2 {
-  background: #f1f5f9;
-  padding: 5rem 0;
-}
-
-.form-2 ul li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.form-2 ul img {
-  width: 20px;
-  margin-right: 10px;
-}
-
-.form-control-input,
-.form-control-textarea {
-  border-radius: var(--radius);
-  border: 1px solid #cbd5e1;
-}
-
-.form-control-submit-button {
-  background: var(--primary);
-  color: #ffffff;
-  border-radius: var(--radius);
-  font-weight: 700;
-}
-
-.form-control-submit-button:hover {
-  background: #2563eb;
-}
-
-/* =========================
-   LOADER
-========================= */
-.spinner-wrapper {
-  background: #ffffff;
-  position: fixed;
+.portfolio-card-info {
+  position: absolute;
   inset: 0;
+  background-color: rgba(0,0,0,0.75);
+  color: var(--light-color);
+  opacity: 0;
+  transition: var(--transition);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 9999;
+  padding: 2rem;
 }
 
-/* =========================
+.portfolio-card:hover .portfolio-card-info {
+  opacity: 1;
+}
+
+/* =====================
+   CONTACTO
+===================== */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  background: var(--light-color);
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.contact-card img {
+  width: 40px;
+  margin: 0 auto 1rem;
+}
+
+.contact-card h5 {
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+/* =====================
    FOOTER
-========================= */
-.copyright {
-  background: var(--dark);
-  color: #cbd5f5;
+===================== */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 2.5rem 1rem;
 }
 
-.copyright a {
-  color: var(--primary);
-}
-
-/* =========================
+/* =====================
    RESPONSIVE
-========================= */
+===================== */
 @media (max-width: 768px) {
-  .header h1 {
+
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero-image-title {
     font-size: 2.2rem;
   }
 
-  .navbar-brand img {
-    height: 36px;
+  .about {
+    text-align: center;
   }
 }

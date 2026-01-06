@@ -1,1092 +1,238 @@
 <!DOCTYPE html>
+<html lang="es">
 
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=320px, initial-scale=1.0, shrink-to-fit=no">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Aria is a business focused HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
-    <meta name="author" content="Inovatik">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content=""> <!-- website name -->
-	<meta property="og:site" content=""> <!-- website link -->
-	<meta property="og:title" content=""> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content=""> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content=""> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content=""> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article">
+  <title>ENFÓCATE | Instituto de Cursos Intensivos</title>
 
-    <!-- Website Title -->
-    <title>Instituto Enfocate | Formación para la Excelencia
-     </title>
-    
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&amp;display=swap&amp;subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+  <meta name="description"
+    content="ENFÓCATE es un instituto de cursos intensivos orientados a la excelencia profesional y la inserción laboral.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <meta property="og:title" content="ENFÓCATE | Cursos Intensivos para la Excelencia">
+  <meta property="og:description"
+    content="Formación práctica, intensiva y orientada al mundo real. Aprendé hoy lo que el mercado necesita.">
+  <meta property="og:image"
+    content="assets/programmer-hero.png">
 </head>
-<body data-spy="scroll" data-target=".fixed-top"><a href="body" class="back-to-top page-scroll" style="display: none;">Back to Top</a>
-    
-    <!-- Preloader -->
-	<div class="spinner-wrapper" style="display: none;">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <section class="container">
+      <div class="logo">
+        <a href="#inicio">ENFÓCATE</a>
+      </div>
+
+      <button class="menu-btn">
+        <img src="assets/menu-bars.svg" class="icon-open" alt="Abrir menú">
+        <img src="assets/menu-close.svg" class="icon-close none" alt="Cerrar menú">
+      </button>
+
+      <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#instituto">Instituto</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </section>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="home">
+    <article class="hero-image" style="--hero-image: url('assets/programmer-hero.png'); --hero-attachment: fixed;">
+      <aside class="hero-image-opacity">
+        <div class="hero-image-content">
+          <h2 class="hero-image-title">
+            Formación Intensiva<br>
+            para la Excelencia Profesional
+          </h2>
+          <a href="#cursos" class="btn">VER CURSOS</a>
         </div>
+      </aside>
+    </article>
+  </section>
+
+  <!-- INSTITUTO -->
+  <section id="instituto" class="about section container">
+    <article>
+      <h1>Instituto ENFÓCATE</h1>
+      <h5>Cursos Intensivos · Formación Práctica · Resultados Reales</h5>
+
+      <p>
+        ENFÓCATE es un instituto de formación profesional diseñado para personas que
+        buscan adquirir habilidades reales en poco tiempo, con foco en la excelencia
+        y la aplicación inmediata en el mundo laboral.
+      </p>
+
+      <p>
+        Nuestros programas intensivos combinan teoría clara, práctica constante
+        y acompañamiento docente, permitiendo a nuestros alumnos destacarse
+        en entornos profesionales exigentes.
+      </p>
+
+      <p>
+        Creemos que aprender no es memorizar, sino **saber hacer**.
+      </p>
+
+      <a class="btn" href="#contacto">
+        SOLICITAR INFORMACIÓN
+      </a>
+    </article>
+
+    <article>
+      <img class="gray-scale" src="assets/programmer-hero.png" alt="Instituto Enfócate">
+    </article>
+
+    <article>
+      <h2>Nuestras Áreas de Formación</h2>
+      <div class="skillIconsContainer">
+        <div class="skillIcon"><img src="assets/service-code.svg" alt="Tecnología"></div>
+        <div class="skillIcon"><img src="assets/service-design.svg" alt="Diseño"></div>
+        <div class="skillIcon"><img src="assets/service-seo.svg" alt="Marketing"></div>
+        <div class="skillIcon"><img src="assets/service-hosting.svg" alt="Infraestructura"></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- CURSOS -->
+  <section id="cursos" class="services section bg-gray-light">
+    <div class="container">
+      <h2 class="section-title">Cursos Intensivos</h2>
+
+      <article class="service-card">
+        <img src="assets/service-code.svg" alt="Desarrollo Web">
+        <h3>Desarrollo Web Full Stack</h3>
+        <p>
+          Aprendé a crear aplicaciones web modernas desde cero.
+          HTML, CSS, JavaScript, Backend y bases de datos en un programa intensivo
+          orientado a la práctica profesional.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <img src="assets/service-design.svg" alt="Diseño UX">
+        <h3>Diseño UX/UI</h3>
+        <p>
+          Diseñá experiencias digitales centradas en el usuario.
+          Prototipado, diseño visual, usabilidad y criterios profesionales
+          aplicados a proyectos reales.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <img src="assets/service-seo.svg" alt="Marketing Digital">
+        <h3>Marketing Digital & SEO</h3>
+        <p>
+          Estrategias de posicionamiento, redes sociales y campañas digitales.
+          Formación orientada a resultados y métricas reales.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <img src="assets/service-hosting.svg" alt="Infraestructura">
+        <h3>Cloud & Herramientas Profesionales</h3>
+        <p>
+          Introducción práctica a herramientas cloud, deploy de proyectos
+          y entornos de trabajo profesionales utilizados en empresas.
+        </p>
+      </article>
     </div>
-    <!-- end of preloader -->
-    
+  </section>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+  <!-- METODOLOGÍA -->
+  <section id="metodologia" class="portfolio section">
+    <div class="container">
+      <h2 class="section-title">Nuestra Metodología</h2>
 
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="logo de la insittución"></a>
-        
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-awesome fas fa-bars"></span>
-            <span class="navbar-toggler-awesome fas fa-times"></span>
-        </button>
-        <!-- end of mobile menu toggle button -->
+      <a class="portfolio-card">
+        <img src="assets/programmer-hero.png" alt="Metodología práctica">
+        <aside class="portfolio-card-info">
+          <div>
+            <h3>Aprender Haciendo</h3>
+            <p>
+              Cada curso está basado en proyectos prácticos,
+              simulando situaciones reales del ámbito profesional.
+            </p>
+          </div>
+        </aside>
+      </a>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link page-scroll active" href="#header">HOME <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#intro">NOSOTROS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#services">SERVICIOS</a>
-                </li>
-               
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#projects">CURSOS</a>
-                </li>
+      <a class="portfolio-card">
+        <img src="assets/programmer-hero.png" alt="Acompañamiento docente">
+        <aside class="portfolio-card-info">
+          <div>
+            <h3>Acompañamiento Constante</h3>
+            <p>
+              Docentes activos en la industria, seguimiento personalizado
+              y feedback continuo.
+            </p>
+          </div>
+        </aside>
+      </a>
 
+      <a class="portfolio-card">
+        <img src="assets/programmer-hero.png" alt="Orientación laboral">
+        <aside class="portfolio-card-info">
+          <div>
+            <h3>Orientación Profesional</h3>
+            <p>
+              Formación pensada para facilitar la inserción laboral
+              y el crecimiento profesional.
+            </p>
+          </div>
+        </aside>
+      </a>
+    </div>
+  </section>
 
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACTO</a>
-                </li>
-            </ul>
-            <span class="nav-item social-icons">
-                <span class="fa-stack">
-                    <a href="https://www.facebook.com/Nations-Institute-Institute-of-Languages-112320331468849">
-					
-                        <span class="hexagon"></span>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                    <span class="fa-stack">
-                    <a href="https://instagram.com/nations.institute?igshid=MzRlODBiNWFlZA==">
-                        <span class="hexagon"></span>
-                        <i class="fab fa-instagram fa-stack-1x"></i>
-                    </a>
-                </span>
-             
-            </span>
-        </div>
-    </nav> <!-- end of navbar -->
-    <!-- end of navbar -->
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact section">
+    <div class="container">
+      <h2 class="section-title">Contactanos</h2>
 
+      <article class="contact-cards">
+        <aside class="contact-card">
+          <img src="assets/contact-location.svg" alt="Ubicación">
+          <h5>Modalidad</h5>
+          <small>Presencial · Online · Híbrida</small>
+        </aside>
 
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="header-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-container">
-          
-                           
-                        </div>
-                    </div> <!-- end of col -->
-                </div> <!-- end of row -->
-            </div> <!-- end of container -->
-        </div> <!-- end of header-content -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
+        <aside class="contact-card">
+          <img src="assets/contact-phone.svg" alt="Teléfono">
+          <h5>Teléfono</h5>
+          <small><a href="tel:1124061599">+54 11 2406 1599</a></small>
+        </aside>
 
+        <aside class="contact-card">
+          <img src="assets/contact-email.svg" alt="Email">
+          <h5>Email</h5>
+          <small><a href="mailto:info@enfocateinstituto.com">info@enfocateinstituto.com</a></small>
+        </aside>
+      </article>
 
-    <!-- Intro -->
-    <div id="intro" class="basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="text-container">
-                        <div class="section-title">¡BIENVENIDOS!</div>
-                        <h2>Nuestra misión</h2>
-                        <p> </p>
-                        <p class="testimonial-text">
-Vas a encontrar un ambiente dinámico, profesional y divertido para aprender los idiomas que siempre soñaste dominar. Nuestro equipo de profesores altamente cualificados te guiará en este emocionante viaje de aprendizaje. No importa tu nivel de conocimiento, tenemos programas adaptados para todos, desde principiantes hasta avanzados. Animate a explorar nuevas culturas, ampliar tus horizontes y desbloquear oportunidades laborales con el poder de los idiomas. ¡Inscríbete hoy y comenza a hablar al mundo con nosotros!
-</p>
-                        <div class="testimonial-author"></div>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-7">
-                    <div class="image-container">
-                        <img class="img-fluid" src="images/40.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of intro -->
+      <a href="mailto:info@enfocateinstituto.com" class="btn">
+        INSCRIBITE O CONSULTÁ
+      </a>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <small>
+      © ENFÓCATE · Instituto de Cursos Intensivos<br>
+      Formación orientada a la excelencia
+    </small>
+  </footer>
 
-    <!-- Description -->
-    <div class="cards-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Card -->
-                    <div class="card">
-						<img class="card-img-top" src="images/44.png">
-                        <div class="card-body text-center">
-                            <p>Las clases son en vivo, para qué puedas estrar desde cualquier parte del mundo, y quedan grabadas para repasar cuando quieras.</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
+  <script src="script.js"></script>
+</body>
 
-                    <!-- Card -->
-                    <div class="card">
-                        <img class="card-img-top" src="images/43.png">
-                        <div class="card-body text-center">
-                            <p>Nuestros profesores responden todas tus dudas y se comprometen a  acompañarte en todo momento.</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-						<img class="card-img-top" src="images/42.png">
-                        <div class="card-body text-center">
-                            <p>Cada vez que finalices un curso de nivel, vas a obtener un certificado de Nations Institute para compartir en tus redes sociales y en tu CV</p>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-1 -->
-    <!-- end of description -->
-
-
-    
-
-    <!-- Details 1 -->
-	<div id="details" class="accordion">
-		<div class="area-1">
-		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
-            
-            <!-- Accordion -->
-            <div class="accordion-container" id="accordionOne">
-                <h2>¿Qué obtenemos al estudiar con Nations Institute?</h2>
-                <div class="item">
-                    <div id="headingOne">
-                        <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
-                            <span class="circle-numbering">1</span>
-                            <span class="accordion-title">Aprendé junto a tus compañeros</span>
-                        </span>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            <p>
-                            Está demostrado que aprender en grupo es más eficiente y motivador. El networking con tus compañeros de clase ayuda a que puedas tener nuevas ideas y hacer mejores proyectos.
-							</p><ul>
-								<li>Clases en grupo</li>
-								<li>Canales de chat</li>
-								<li>Foro privado</li>
-							</ul>
-                            <p></p>
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            
-                <div class="item">
-                    <div id="headingTwo">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button">
-                            <span class="circle-numbering">2</span><span class="accordion-title">Contenidos de programas internacionales.</span>
-                        </span>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Nuestros contenidos y programas oficiales son usados por cada institución de enseñanza de idiomas a traves del mundo.
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            
-                <div class="item">
-                    <div id="headingThree">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button">
-                            <span class="circle-numbering">3</span><span class="accordion-title">Suma tu certificado de nivel a tu cv profesional</span>
-                        </span>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            <p>Te brindamos certificados de nivel para agregar a tu perfil profesional y asi poder destacarte en los puestos de trabajo internacionales más demandados por el idioma.</p>
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            </div> <!-- end of accordion-container -->
-            <!-- end of accordion -->
-
-		</div> <!-- end of area-2 -->
-    </div> <!-- end of accordion -->
-    <!-- end of details 1 -->
-
-
-        <!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2"></div> <!-- end of area-2 -->
-     <!-- end of tabs -->
-    <!-- end of details 2 -->
-
-
-    
-    
-                   
-                    
-                 <!-- end of col -->
-             <!-- end of row -->
-         <!-- end of container -->
-     <!-- end of form-1 -->
-    <!-- end of call me -->
-
-
-    <!-- Services -->
-    <div id="services" class="cards-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">CURSOS Y MODALIDAD</div>
-                    <h2>Contamos con diferentes opciones que se adaptan a cada alumno.  <br> </h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/45.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <p>
-								Duración: 12 meses.<br>
-								Tiempo: Una vez por semana.<br> 
-								Dedicación: Media-baja.<br>
-								Inversión: Baja.
-								<br>
-								<br>
-								Ideal para personas poco tiempo para dedicar en la semana al idioma o que quieran ir a su ritmo con los contenidos.
-								<br>
-								<br>
-								Habiendo completado los contenidos, exámenes y la totalidad del nivel, recibirás tu certificación de nivel.
-							</p>
-                        </div>
-                       
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/46.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            Duración: 6 meses.<br>
-							Tiempo: 2 veces por semana.<br>
-							Dedicación: Media-alta.<br>
-							Inversión: Media.
-							<br>
-							<br>	
-							Ideal para aquellos que tengan mayor tiempo para dedicar a las clases y los contenidos. 
-							<br>
-							<br>
-							 Habiendo completado los contenidos, exámenes y la totalidad del nivel, recibirás tu certificación de nivel.
-                        </div>
-                      
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/47.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-								Duración: 3 meses.<br>
-								Tiempo: 3 veces por semana. <br>
-								Dedicación: Alta.<br>
-								Inversión: Media-alta.
-								<br>
-								<br>
-								Ideal para aquellos que quieran  dominar un idioma en poco tiempo. Implica dedicar mayor tiempo y esfuerzo a las tareas y clases. Se lanzan en fechas específicas del año, son oportunidades únicas para impulsarte.
-								<br>
-								<br>
-								Habiendo completado los contenidos, exámenes y la totalidad del nivel, recibirás tu certificación de nivel.
-
-
-                        </div>
-                       <!-- end of button-container -->
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
-    <!-- end of services -->
-
-
-     <!-- Projects -->
-    <div id="projects" class="filter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">CURSOS</div>
-                    <h2>Conocé todos los idiomas que podes aprender en Nations</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                  
-                    <div class="grid" style="position: relative; height: 540px;">
-                        <div class="element-item design" style="position: absolute; left: 0px; top: 0px;">
-                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"></div><img src="images/49.png" alt="alternative"></a>
-                        </div>
-                          <div class="element-item design design" style="position: absolute; left: 277px; top: 0px;">
-                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"></div><img src="images/50.png" alt="alternative"></a>
-                        </div>
-                        <div class="element-item development" style="position: absolute; left: 554px; top: 0px;">
-                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"></div><img src="images/48.png" alt="alternative"></a>
-                        </div>
-                        <div class="element-item design" style="position: absolute; left: 831px; top: 0px;">
-                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"></div><img src="images/52.png" alt="alternative"></a>
-                        </div>
-                        <div class="element-item design " style="position: absolute; left: 0px; top: 270px;">
-                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"></div><img src="images/54.png" alt="alternative"></a>
-                        </div>
-                        <div class="element-item marketing" style="position: absolute; left: 277px; top: 270px;">
-                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"></div><img src="images/51.png" alt="alternative"></a>
-                        </div>
-                        <div class="element-item seo" style="position: absolute; left: 554px; top: 270px;">
-							<a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"></div><img src="images/53.png" alt="alternative"></a>
-                        </div>
-						<div class="element-item seo" style="position: absolute; left: 831px; top: 270px;">
-							<a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Niños</span></div><img src="" alt="alternative"></a>
-                        </div>
-
-                         
-                          
-
-                        </div>
-                    </div> <!-- end of grid -->
-                    <!-- end of filter -->
-                    
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-     <!-- end of filter -->
-    <!-- end of projects -->
-
-    <!-- Project Lightboxes -->
-    <!-- Lightbox -->
-    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-1.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-2.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-7" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-7.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                 <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-4" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-4.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                 <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-			
-    <!-- Lightbox -->
-    <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-5.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                 <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-6" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-6.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                 <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-<!-- Lightbox -->
-    <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-5.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                </div>
-                 <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-     <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
-    <!-- Lightbox -->
-    <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-5.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- Lightbox -->
-    <div id="project-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
-        <div class="row">
-            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-            <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-3.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
-                <a class="btn-outline-reg mfp-close as-button" href="#projects">VOLVER</a> 
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-
- <!-- Our Staff -->
-    <div class="slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">NUESTRO EQUIPO</div>
-                    <p class="p-heading">Contamos con un equipo de profesionales de primer nivel: profesores alegres, dinámicos, profesionales en lo que hacen y con muchas
-ganas de aprender. Trabajamos en equipo ¡Como una familia! Nos respetamos, enseñamos y
-valoramos a cada uno de los nuestros. Aprender una cultura distinta te hace reflexionar en la
-propia. </p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider swiper-container-horizontal">
-                            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-3736.33px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="10">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-7.jpg" alt="alternative">
-                                        <div class="card-body">
-                                             <div class="testimonial-author">Arrua, Cintia - Profesora de Italiano </div>
-                                            <div class="testimonial-text">Comence de niña en la Escuela Dante Alighieri de Escobar, donde nació mi amor por el idioma. 
-Luego de 13 años escolares, una vez recibida continue formalizando mis estudios en el Instituto Joaquin V. Gonzalez y perfeccionándome en la parte de dicción italiana. 
-Soy gestora de Ciudadanía Italiana y hace ya 10 años que tengo experiencia en el dictado del idioma, en distintos niveles, tanto en clases presenciales como virtuales.  
-Amo enseñar y compartir con mis alumnos todos los conocimientos que adquirí, por lo cual continúo capacitándome constantemente para poder brindarles los métodos más modernos, 
-avanzamos aprendiendo en forma didáctica, alegre y con mucha onda!.</div>
-                                           
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="11">
-                                    <div class="card">
-                                        <img class="card-image" src="images/maldonado.jpg" alt="alternative">
-                                        <div class="card-body">
-                                             <div class="testimonial-author">Maldonado, Hernán - Profesor de&nbsp;Alemán </div>
-                                            <div class="testimonial-text">
-Mis inicios con el alemán comenzaron en la música de mi rutina de niño. 
-Querer entender la pronunciación me llevó a querer hablar el idioma. 
-Empecé a estudiar y me enamoré del idioma y de su cultura, costumbres y gastronomía. 
-Empece luego, en la Facultad de Lenguas en Córdoba Capital la carrera de profesor y traductor. 
-Trabajo hace tiempo con clases de manera online y, hasta hoy, sigo  transmitiendo mis conocimientos 
-sobre este hermoso idioma y la confianza para que otros lo puedan&nbsp;aprender.</div>
-                                           
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="12">
-                                    <div class="card">
-                                        <img class="card-image" src="images/pereyra.jpg" alt="alternative">
-                                        <div class="card-body">
-                                             <div class="testimonial-author">Pereyra, Mariangeles - Profesora de Inglés </div>
-                                            <div class="testimonial-text">
-Desde siempre me resultó fascinante aprender idiomas, pasaron los años y esa misma curiosidad me llevó a adentrarme en el mundo del idioma inglés. 
-Hoy cuento con la capacidad de formación docente en el Profesorado de Inglés cursado en el I.S.F.D n°41. 
-Me motiva introducir a mis alumnos y enseñarles lo interesante y versátil que éste idioma es.</div>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                  <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="0">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-4.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Münter, Sofía - Fundadora. Dirección General y Dirección de Idiomas </div>
-                                            <div class="testimonial-text">Tengo una formación en 'Organización y gestión de organizaciones' y 'Profesorado de inglés como lengua extranjera'. 
-											Cuento con amplio conocimiento en clases virtuales, aula aumentada, creación y secuenciación de contenido pedagógico. 
-											Sigo aún capacitandome en pedagogía de la enseñanza de una nueva lengua a adultos. Además de estudiar y hablar distintos idiomas. 
-											Tengo experiencia en la enseñanza de niños, adolescentes, jóvenes y adultos mayores. Me encanta enseñar y también me divierto mucho aprendiendo idiomas nuevos..</div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-								                                  <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="1">
-                                    <div class="card">
-                                        <img class="card-image" src="images/edelweiss.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Popperl, Edelweiss Heidi - Profesora de inglés </div>
-                                            <div class="testimonial-text">
-								Soy Traductora técnica de inglés y sobre todo apasionada por la gramática y fonética inglesa. 
-								Curiosa por naturaleza siempre estoy buscando aprender cosas nuevas que aporten valor a mis clases y a mi persona. 
-								Algo que caracteriza mis clases es la alegría y la motivación constante a mis alumnos. Me adapto a sus intereses y 
-								los acompaño en el camino del aprendizaje. Soy agradecida de las oportunidades que Dios me pone al alcance de la mano
-								y siempre busco dar, ya sea conocimiento, tiempo&nbsp;y/o&nbsp;amor.</div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-								
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="2">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-1.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Ferraro, Viviana  - Profesora de Francés</div>
-                                            <div class="testimonial-text">Soy profesora de Francés recibida en la Alianza Francesa, con cuatro títulos en 
-                                            (básico, fundamental, práctico y avanzado). Realicé cursos en París de conversación y trabajé como traductora de Francés de Xuxa en Telefé. Además de preparar alumnos de escuelas secundarias y adultos para aprender este bello idioma, soy dinámica en la enseñanza y con métodos actualizados de enseñanza.</div>
-                                            
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="3">
-                                    <div class="card">
-                                        <img class="card-image" src="images/aimara.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Münter, Aimará - Profesora de Alemán</div>
-                                            <div class="testimonial-text"> Nacida en una familia alemana-argentina, El alemán siempre ha formado parte de mi vida, ya que aún seguimos hablándola en casa de mis padres.
-Enseñar me apasiona, pero mucho más me apasiona enseñar este idioma que me conecta con mis raíces y es una parte de mí. Viajé a Alemania a estudiar y perfeccionar aquello que adquirí de manera casi natal. Aún sigo capacitandome en la enseñanza, en el idioma y en otras áreas. Me encanta compartir este idioma con otras personas y disfruto mucho dar clases. Me gusta que  sean interactivas, dinámicas, creativas y que respondan a las inquietudes de los alumnos.
-</div>
-                                            
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="4">
-                                    <div class="card">
-                                        <img class="card-image" src="images/lucia.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Gonzalez, Lucia - Profesora de Inglés</div>
-                                            <div class="testimonial-text"> 
-Profesora de inglés de kinder, primaria y secundaria. Capacitada en ISFD n 41, Adrogué, Alte Brown. Cuento con experiencia en la enseñanza del idioma ingles a niños desde la edad de 4 años en adelante, adolescentes, jóvenes y adultos. Soy una persona simpática y dedicada que ama enseñar, alentando a sus alumnos a superarse día a día, tomando cada desafía como una instancia de aprendizaje y crecimiento.
-</div>
-                                            
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="5">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-2.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Siurmicki, Eliamar - Profesora de Portugués </div>
-                                            <div class="testimonial-text"> Soy Profesora de Portugués y Español para extranjeros. Egresada en la carrera de Ciencias de la Educación, con Habilitacion en Orientación Educacional en la Universidad Tuiuti en Brasil.
-Tengo experiencia en la enseñanza de idiomas en distintos niveles del sistema privado. Soy una persona simpática, que le gusta el arte de enseñar y enfrentar los desafíos. Actualmente sigo perfeccionándome en el área de la Educación Tecnológica.</div>
-                                            
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="6">
-                                    <div class="card">
-                                        <img class="card-image" src="images/roccia.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Roccia, Victoria - Profesora de Inglés</div>
-                                            <div class="testimonial-text"> Soy profesora de Inglés y estudiante del "Traductorado Literario y Técnico-Científico en Inglés". 
-											Estudio y me perfecciono en este hermoso idioma desde los 8 años. Cuento con experiencia en la enseñanza a niños, adolescentes, 
-											jóvenes y adultos. Disfruto de planificar mis clases, de dictarlas, de estar en contacto con los estudiantes y, sobre todo, 
-											de sentir una enorme satisfacción cada vez que un alumno puede leer, escribir, hablar y escuchar en inglés.</div>
-                                            
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide swiper-slide-prev" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="7">
-                                    <div class="card">
-                                        <img class="card-image" src="images/dacol.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Da Col, Enna Romina, profesora de italiano </div>
-                                            <div class="testimonial-text"> Mi pasión por el italiano me la transmitió mi abuelo,
-											que nos enseñaba versos y palabras en dialecto. Me eduqué en una escuela italiana,
-											rindiendo un examen CILS  C1 y tuve la posibilidad de ampliar mis aprendizajes con
-											un curso de lengua y cultura italiana en el 'bel paese'. Aunque me formé como profesora
-											de lengua y literatura española, enseñar italiano es como volver a casa. Quiero que mis
-											alumnos disfruten del aprendizaje de este nuevo idioma y puedan apreciar la riqueza cultural de Italia. </div>
-                                            
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide swiper-slide-active" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="8">
-                                    <div class="card">
-                                        <img class="card-image" src="images/maidana.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Maidana, Felix - Profesor de Inglés</div>
-                                            <div class="testimonial-text"> Siempre tuve una pasión muy grande por el inglés, sobre todo de la Lingüística Aplicada en la 
-											enseñanza del inglés como segunda lengua. Me encantan los desafíos, y los objetivos claros. Por eso hace más de 5 años me dedico 
-											a la enseñanza de Exámenes Internacionales, y niveles avanzados (B2, C1, y C2). Además de amar la docencia, mi otra gran aspiración
-											es especializarme en Lexicólogia y Lexicografía. </div>
-                                            
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide swiper-slide-next" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="9">
-                                    <div class="card">
-                                        <img class="card-image" src="images/godoy.jpg" alt="alternative">
-                                        <div class="card-body">
-                                             <div class="testimonial-author">Godoy, Melanie. Profesora de Inglés</div>
-                                            <div class="testimonial-text">Nací en una familia atravesada por los idiomas
-											y las diferentes culturas, pero siempre me llamó la atención el inglés. 
-											Comencé mis estudios en mi adolescencia hasta rendir para la Universidad de Cambridge los exámenes FCE y CAE.
-											Sigo aún capacitándome en la enseñanza del idioma inglés. 
-											Disfruto de ver a mis estudiantes superarse a si mismos mientras los acompaño en este camino donde el aprendizaje es mutuo.</div>
-                                           
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->                                
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="10">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-7.jpg" alt="alternative">
-                                        <div class="card-body">
-                                             <div class="testimonial-author">Arrua, Cintia - Profesora de Italiano </div>
-                                            <div class="testimonial-text">Comence de niña en la Escuela Dante Alighieri de Escobar, donde nació mi amor por el idioma. 
-Luego de 13 años escolares, una vez recibida continue formalizando mis estudios en el Instituto Joaquin V. Gonzalez y perfeccionándome en la parte de dicción italiana. 
-Soy gestora de Ciudadanía Italiana y hace ya 10 años que tengo experiencia en el dictado del idioma, en distintos niveles, tanto en clases presenciales como virtuales.  
-Amo enseñar y compartir con mis alumnos todos los conocimientos que adquirí, por lo cual continúo capacitándome constantemente para poder brindarles los métodos más modernos, 
-avanzamos aprendiendo en forma didáctica, alegre y con mucha onda!.</div>
-                                           
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->  
-
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="11">
-                                    <div class="card">
-                                        <img class="card-image" src="images/maldonado.jpg" alt="alternative">
-                                        <div class="card-body">
-                                             <div class="testimonial-author">Maldonado, Hernán - Profesor de&nbsp;Alemán </div>
-                                            <div class="testimonial-text">
-Mis inicios con el alemán comenzaron en la música de mi rutina de niño. 
-Querer entender la pronunciación me llevó a querer hablar el idioma. 
-Empecé a estudiar y me enamoré del idioma y de su cultura, costumbres y gastronomía. 
-Empece luego, en la Facultad de Lenguas en Córdoba Capital la carrera de profesor y traductor. 
-Trabajo hace tiempo con clases de manera online y, hasta hoy, sigo  transmitiendo mis conocimientos 
-sobre este hermoso idioma y la confianza para que otros lo puedan&nbsp;aprender.</div>
-                                           
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->  
-
-                                <!-- Slide -->
-                                <div class="swiper-slide" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="12">
-                                    <div class="card">
-                                        <img class="card-image" src="images/pereyra.jpg" alt="alternative">
-                                        <div class="card-body">
-                                             <div class="testimonial-author">Pereyra, Mariangeles - Profesora de Inglés </div>
-                                            <div class="testimonial-text">
-Desde siempre me resultó fascinante aprender idiomas, pasaron los años y esa misma curiosidad me llevó a adentrarme en el mundo del idioma inglés. 
-Hoy cuento con la capacidad de formación docente en el Profesorado de Inglés cursado en el I.S.F.D n°41. 
-Me motiva introducir a mis alumnos y enseñarles lo interesante y versátil que éste idioma es.</div>
-                                           
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->  
- 
-                            
-                            <div class="swiper-slide swiper-slide-duplicate" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="0">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-4.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Münter, Sofía - Fundadora. Dirección General y Dirección de Idiomas </div>
-                                            <div class="testimonial-text">Tengo una formación en 'Organización y gestión de organizaciones' y 'Profesorado de inglés como lengua extranjera'. 
-											Cuento con amplio conocimiento en clases virtuales, aula aumentada, creación y secuenciación de contenido pedagógico. 
-											Sigo aún capacitandome en pedagogía de la enseñanza de una nueva lengua a adultos. Además de estudiar y hablar distintos idiomas. 
-											Tengo experiencia en la enseñanza de niños, adolescentes, jóvenes y adultos mayores. Me encanta enseñar y también me divierto mucho aprendiendo idiomas nuevos..</div>
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="1">
-                                    <div class="card">
-                                        <img class="card-image" src="images/edelweiss.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Popperl, Edelweiss Heidi - Profesora de inglés </div>
-                                            <div class="testimonial-text">
-								Soy Traductora técnica de inglés y sobre todo apasionada por la gramática y fonética inglesa. 
-								Curiosa por naturaleza siempre estoy buscando aprender cosas nuevas que aporten valor a mis clases y a mi persona. 
-								Algo que caracteriza mis clases es la alegría y la motivación constante a mis alumnos. Me adapto a sus intereses y 
-								los acompaño en el camino del aprendizaje. Soy agradecida de las oportunidades que Dios me pone al alcance de la mano
-								y siempre busco dar, ya sea conocimiento, tiempo&nbsp;y/o&nbsp;amor.</div>
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="2">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-1.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Ferraro, Viviana  - Profesora de Francés</div>
-                                            <div class="testimonial-text">Soy profesora de Francés recibida en la Alianza Francesa, con cuatro títulos en 
-                                            (básico, fundamental, práctico y avanzado). Realicé cursos en París de conversación y trabajé como traductora de Francés de Xuxa en Telefé. Además de preparar alumnos de escuelas secundarias y adultos para aprender este bello idioma, soy dinámica en la enseñanza y con métodos actualizados de enseñanza.</div>
-                                            
-                                        </div>
-                                    </div>
-                                </div></div> <!-- end of swiper-wrapper -->
-        
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
-                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
-                            <!-- end of add arrows -->
-        
-                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> <!-- end of swiper-container -->
-                    </div> <!-- end of sliedr-container -->
-                    <!-- end of card slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider -->
-    <!-- end of our staff -->
-    
-    <!-- Testimonials-->
-    <div class="slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-					<div class="section-title text-center">TESTIMONIOS DE ALUMNOS</div>
-                    <h2>Mas de 200 estudiantes nos recomiendan</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider swiper-container-horizontal">
-                            <div class="swiper-wrapper" style="transition-duration: 300ms; transform: translate3d(-1358.67px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="0">
-                                    <div class="card">
-                                        <img class="card-image" src="images/argentine_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Malena Gandulfo <br> Buenos Aires, Argentina </div>
-                                            <div class="testimonial-subtitle">Estudiante de Aléman</div>
-											<div class="testimonial-text"> Me encanta Nations Institute por su profesionalismo, profesores super buena onda que hacen las clases muy dinamicas y divertidas</div>
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="1">
-                                    <div class="card">
-                                        <img class="card-image" src="images/chilean_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Mariana Godoy <br> Santiago, Chile</div>
-											<div class="testimonial-subtitle">Estudiante de Inglés</div>
-                                            <div class="testimonial-text">Gracias a Nations pude conseguir el trabajo que queria en el extranjero, me ayudo muchisimo a mejorar mi nivel y además la profesoras son super copadas y explican muy bien.</div>
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="2">
-                                    <div class="card">
-                                        <img class="card-image" src="images/argentine_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Franco Malarde <br> Chacho, Argentina</div>
-											<div class="testimonial-subtitle">Estudiante de Portugués</div>
-                                            <div class="testimonial-text">Encontre Nations en las redes y empecé a tomar clases con la profesora Eliamar, y la verdad que supero mis expectativas, lo recomiendo muchisimo.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                  <!-- Slide -->
-                                <div class="swiper-slide swiper-slide-prev" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="0">
-                                    <div class="card">
-                                        <img class="card-image" src="images/argentine_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Malena Gandulfo <br> Buenos Aires, Argentina </div>
-                                            <div class="testimonial-subtitle">Estudiante de Aléman</div>
-											<div class="testimonial-text"> Me encanta Nations Institute por su profesionalismo, profesores super buena onda que hacen las clases muy dinamicas y divertidas</div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-								                                  <!-- Slide -->
-                                <div class="swiper-slide swiper-slide-active" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="1">
-                                    <div class="card">
-                                        <img class="card-image" src="images/chilean_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Mariana Godoy <br> Santiago, Chile</div>
-											<div class="testimonial-subtitle">Estudiante de Inglés</div>
-                                            <div class="testimonial-text">Gracias a Nations pude conseguir el trabajo que queria en el extranjero, me ayudo muchisimo a mejorar mi nivel y además la profesoras son super copadas y explican muy bien.</div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-								
-                                <!-- Slide -->
-                                <div class="swiper-slide swiper-slide-next" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="2">
-                                    <div class="card">
-                                        <img class="card-image" src="images/argentine_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Franco Malarde <br> Chacho, Argentina</div>
-											<div class="testimonial-subtitle">Estudiante de Portugués</div>
-                                            <div class="testimonial-text">Encontre Nations en las redes y empecé a tomar clases con la profesora Eliamar, y la verdad que supero mis expectativas, lo recomiendo muchisimo.</div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="0">
-                                    <div class="card">
-                                        <img class="card-image" src="images/argentine_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Malena Gandulfo <br> Buenos Aires, Argentina </div>
-                                            <div class="testimonial-subtitle">Estudiante de Aléman</div>
-											<div class="testimonial-text"> Me encanta Nations Institute por su profesionalismo, profesores super buena onda que hacen las clases muy dinamicas y divertidas</div>
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="1">
-                                    <div class="card">
-                                        <img class="card-image" src="images/chilean_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Mariana Godoy <br> Santiago, Chile</div>
-											<div class="testimonial-subtitle">Estudiante de Inglés</div>
-                                            <div class="testimonial-text">Gracias a Nations pude conseguir el trabajo que queria en el extranjero, me ayudo muchisimo a mejorar mi nivel y además la profesoras son super copadas y explican muy bien.</div>
-                                        </div>
-                                    </div>
-                                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" style="width: 319.667px; margin-right: 20px;" data-swiper-slide-index="2">
-                                    <div class="card">
-                                        <img class="card-image" src="images/argentine_flag.svg" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Franco Malarde <br> Chacho, Argentina</div>
-											<div class="testimonial-subtitle">Estudiante de Portugués</div>
-                                            <div class="testimonial-text">Encontre Nations en las redes y empecé a tomar clases con la profesora Eliamar, y la verdad que supero mis expectativas, lo recomiendo muchisimo.</div>
-                                        </div>
-                                    </div>
-                                </div></div> <!-- end of swiper-wrapper -->
-        
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
-                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
-                            <!-- end of add arrows -->
-        
-                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> <!-- end of swiper-container -->
-                    </div> <!-- end of sliedr-container -->
-                    <!-- end of card slider -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider -->
-    <!-- end of our staff -->                
- 
-                    
-
-                 <!-- end of col -->
-             <!-- end of row -->
-         <!-- end of container -->
-     <!-- end of basic-2 -->
-    <!-- end of team -->
-
-    <!-- Contact -->
-    <div id="contact" class="form-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="text-container">
-                        <div class="section-title">CONTACTANOS</div>
-                        <h2>¡Quiero inscribirme!</h2>
-                        <p>Recibí más información sobre nuestros cursos, fechas e inscripciones.</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="address"><i class="fas fa-map-marker-alt"></i>Buenos Aires, Argentina</li>
-                            <li><i class="fas fa-phone"> </i><a href="https://api.whatsapp.com/send?phone=+5491127566412&amp;text=Hola, Quiero saber mas sobre los cursos de formación">
-                            Whatsapp +549-11-2756-6412</a></li><a href="https://api.whatsapp.com/send?phone=+5491127566412&amp;text=Hola, Quiero saber mas sobre los cursos de formación">
-                            </a><li><a href="https://api.whatsapp.com/send?phone=+5491127566412&amp;text=Hola, Quiero saber mas sobre los cursos de formación"><i class="fas fa-envelope"></i></a><a href="mailto:info.institutoenfocate@gmail.com">info.institutoenfocate@gmail.com</a>
-                            </li>
-                        </ul>
-                        <h3>Seguinos en las redes para conocernos mejor</h3>
-
-                        <span class="fa-stack">
-                            <a href="https://www.facebook.com/Nations-Institute-Institute-of-Languages-112320331468849">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="https://instagram.com/nations.institute?igshid=MzRlODBiNWFlZA==">
-                                <span class="hexagon"></span>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    
-                    <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false" novalidate="true">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required="">
-                            <label class="label-control" for="cname">Nombre</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required="">
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required=""></textarea>
-                            <label class="label-control" for="cmessage">Tu mensaje</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms">Deseo recibir novedades en mi mail <a href="privacy-policy.html"></a><a href="mailto:info.institutoenfocate@gmail.com"></a> 
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button disabled">ENVIAR</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-2 -->
-    <!-- end of contact -->
-
-
-    <!-- Footer -->
-    
-                
-     <!-- end of footer -->  
-    <!-- end of footer -->
-
-
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small"> Instituto Enfocate - Copyright © 2025 <a href="https://inovatik.com">L.M Graphic Designer </a></p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
-    
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->  
-
-</body></html>
+</html>
