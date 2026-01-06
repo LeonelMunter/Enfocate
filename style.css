@@ -452,35 +452,71 @@ a {
 }
 
 /* =====================
-   TESTIMONIOS
+   TESTIMONIOS - CARROUSEL
 ===================== */
+.testimonials {
+  overflow: hidden;
+}
+
+.testimonials-heading {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
 .testimonials-subtitle {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 1.05rem;
+  color: var(--text-color);
 }
 
-.testimonials-grid {
+/* Carrusel */
+.testimonials-carousel {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.5rem;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 320px);
+  gap: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
 }
 
+.testimonials-carousel::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+/* Card */
 .testimonial-card {
+  scroll-snap-align: center;
   background-color: var(--light-color);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   text-align: center;
   box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: var(--transition);
 }
 
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Imagen circular */
 .testimonial-card img {
-  width: 40px;
-  margin-bottom: 1rem;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 3px solid var(--primary-color);
 }
 
+/* Texto */
 .testimonial-card h4 {
   margin-bottom: 0.3rem;
+  color: var(--secondary-color);
 }
 
 .testimonial-card span {
@@ -489,6 +525,19 @@ a {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .testimonials-carousel {
+    grid-auto-columns: minmax(300px, 360px);
+  }
+}
+
 
 /* =====================
    EQUIPO DOCENTE
