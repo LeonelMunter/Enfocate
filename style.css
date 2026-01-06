@@ -234,108 +234,109 @@ a {
 }
 
 /* =====================
-   ABOUT / INSTITUTO
+   ABOUT / INSTITUTO 
 ===================== */
 .about {
-  display: grid;
-  /* Proporción de la imagen respecto al texto como en la captura */
-  grid-template-columns: 1fr 1fr;
-  gap: 0; /* Unimos las secciones para un look más moderno */
-  align-items: stretch;
+  display: flex;
+  flex-direction: column; /* Cambiado a vertical para coincidir con la imagen */
+  align-items: center;
+  text-align: center; /* Centra todo el texto */
   background: #fff;
-  overflow: hidden;
-  border-radius: var(--radius);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-  margin: 4rem auto;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Columna de Texto */
+/* Bloque de texto superior */
 .about article:first-child {
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 800px; /* Limita el ancho para mejor lectura */
+  margin-bottom: 3rem;
 }
 
 .about h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--secondary-color);
   font-weight: 900;
-  line-height: 1;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .about h5 {
   color: var(--primary-color);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
+  text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 2rem;
-  border-bottom: 2px solid var(--primary-color);
-  display: inline-block;
-  padding-bottom: 5px;
-  width: fit-content;
+  display: block; /* Ocupa su propia línea */
 }
 
 .about p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.8;
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.6;
 }
 
 .about blockquote {
-    font-size: 1.4rem;
-    color: var(--secondary-color);
-    font-weight: 700;
-    margin: 1rem 0 2rem 0;
-    font-style: italic;
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin: 2rem 0;
+  font-style: italic;
 }
 
-/* Columna de Imagen (Estilo Hero) */
+/* Botón centrado */
+.about .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Contenedor de la Imagen Central */
 .about article:nth-child(2) {
-  position: relative;
-  min-height: 450px;
+  width: 100%;
+  max-width: 900px; /* Ajustado al ancho de la imagen de referencia */
+  margin: 0 auto 4rem auto;
 }
 
 .gray-scale {
-  position: absolute;
-  top: 0; left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Esto hace que se vea como fondo de la mitad de la sección */
-  filter: grayscale(100%) brightness(0.7); /* Estilo sobrio de la imagen */
-  border-radius: 0; /* Quitamos radio interno para que pegue al borde */
-  transition: var(--transition);
-}
-
-.about article:nth-child(2):hover .gray-scale {
-  filter: grayscale(0%) brightness(1);
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  filter: none; /* Quitamos el gris por defecto para que luzca como la captura */
+  transition: transform 0.3s ease;
 }
 
 /* =====================
-   AREAS / ICONOS
+   AREAS / ICONOS (Inferior)
 ===================== */
 .about article:last-child {
-  grid-column: 1 / -1;
-  background: #f9f9f9; /* Color suave de fondo para separar */
-  padding: 4rem 2rem;
-  text-align: center;
+  width: 100%;
+  padding-top: 3rem;
+  border-top: 1px solid #eee; /* Línea sutil divisoria */
 }
 
 .about h2 {
-    font-size: 2.2rem;
-    color: var(--secondary-color);
-    margin-bottom: 3rem;
-    text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
 }
 
 .skillIconsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
+  display: flex; /* Flex para centrar iconos */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -343,38 +344,30 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 1rem;
+  width: 100px; /* Tamaño fijo para alineación perfecta */
+  gap: 15px;
   transition: var(--transition);
 }
 
 .skillIcon img {
-  width: 60px;
-  height: 60px;
-  transition: var(--transition);
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
 }
 
-/* Efecto de color de Enfócate al pasar el mouse */
 .skillIcon:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .skillIcon:hover img {
-  filter: drop-shadow(0 0 8px var(--primary-color));
+  opacity: 1;
+  filter: drop-shadow(0 0 5px var(--primary-color));
 }
 
 /* Mobile Responsive */
-@media (max-width: 992px) {
-  .about {
-    grid-template-columns: 1fr;
-  }
-  .about article:first-child {
-    padding: 2rem;
-  }
-  .about article:nth-child(2) {
-    height: 300px;
-    order: -1; /* Imagen arriba en móviles */
-  }
+@media (max-width: 768px) {
+  .about h1 { font-size: 2.5rem; }
+  .skillIconsContainer { gap: 1.5rem; }
 }
 
 /* =====================
