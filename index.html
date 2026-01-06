@@ -193,6 +193,102 @@
     </div>
   </section>
 
+  <!-- TESTIMONIOS -->
+  <section id="equipo" class="section bg-gray-light">
+  <div class="container">
+
+    <h2 class="section-title">Nuestro Equipo Docente</h2>
+    <p class="team-description">
+      En ENFÓCATE contamos con un equipo de docentes altamente capacitados,
+      apasionados por la enseñanza y con experiencia real en el ámbito profesional.
+      Creemos en el aprendizaje colaborativo, el acompañamiento constante
+      y la excelencia académica.
+    </p>
+
+    <div class="team-grid">
+
+      <article class="team-card">
+        <img src="images/testimonial-4.jpg" alt="Directora Enfócate">
+        <h3>Alejandra Mónica Altuzarra</h3>
+        <span>Fundadora · Dirección Académica</span>
+        <p>
+          Especialista en gestión educativa y enseñanza general.
+          Amplia experiencia en formación presencial y virtual,
+          desarrollo pedagógico y liderazgo académico.
+        </p>
+      </article>
+
+      <!-- <article class="team-card">
+        <img src="images/pereyra.jpg" alt="Docente Inglés">
+        <h3>Mariángeles Pereyra</h3>
+        <span>Profesora de Inglés</span>
+        <p>
+          Docente formada en ISFD N°41.
+          Apasionada por la enseñanza del idioma inglés y
+          el acompañamiento personalizado de los estudiantes.
+        </p>
+      </article>
+
+      <article class="team-card">
+        <img src="images/aimara.jpg" alt="Docente Alemán">
+        <h3>Aimará Münter</h3>
+        <span>Profesora de Alemán</span>
+        <p>
+          Formación bilingüe alemán–español.
+          Clases dinámicas, interactivas y orientadas a la comunicación real.
+        </p>
+      </article> -->
+
+    </div>
+  </div>
+</section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="section">
+  <div class="container">
+
+    <h2 class="section-title">Testimonios de Nuestros Alumnos</h2>
+    <p class="testimonials-subtitle">
+      Más de <strong>200 estudiantes</strong> ya confiaron en ENFÓCATE
+      para su formación profesional.
+    </p>
+
+    <div class="testimonials-grid">
+
+      <article class="testimonial-card">
+        <img src="assets/customer-1.jpg" alt="Argentina">
+        <h4>Malena Gandulfo</h4>
+        <span>Estudiante de Gestión · Argentina</span>
+        <p>
+          Excelente instituto. Las clases son dinámicas,
+          los profesores súper profesionales y el acompañamiento es constante.
+        </p>
+      </article>
+
+      <article class="testimonial-card">
+        <img src="assets/customer-2.jpg" alt="Chile">
+        <h4>Mariana Godoy</h4>
+        <span>Estudiante de Marketing · Chile</span>
+        <p>
+          Gracias a ENFÓCATE mejoré mi nivel y conseguí trabajo en el exterior.
+          Totalmente recomendable.
+        </p>
+      </article>
+
+      <!-- <article class="testimonial-card">
+        <img src="images/argentine_flag.svg" alt="Argentina">
+        <h4>Franco Malarde</h4>
+        <span>Estudiante de Portugués · Argentina</span>
+        <p>
+          Superó mis expectativas. Docentes comprometidos
+          y clases claras desde el primer día.
+        </p>
+      </article> -->
+
+    </div>
+  </div>
+</section>
+
   <!-- CONTACTO -->
   <section id="contacto" class="contact section">
     <div class="container">
@@ -202,7 +298,7 @@
         <aside class="contact-card">
           <img src="assets/contact-location.svg" alt="Ubicación">
           <h5>Modalidad</h5>
-          <small>Presencial · Online · Híbrida</small>
+          <small>Buenos Aires · Argentina</small>
         </aside>
 
         <aside class="contact-card">
@@ -214,13 +310,66 @@
         <aside class="contact-card">
           <img src="assets/contact-email.svg" alt="Email">
           <h5>Email</h5>
-          <small><a href="mailto:info@enfocateinstituto.com">info@enfocateinstituto.com</a></small>
+          <small><a href="mailto:info@enfocateinstituto.com">info.institutoenfocate@gmail.com</a></small>
         </aside>
       </article>
+      <form class="contact-form box-shadow-1">
+  <input
+    type="text"
+    name="name"
+    placeholder="Nombre completo *"
+    title="El nombre solo acepta letras y espacios"
+    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+    required
+  >
 
-      <a href="mailto:info@enfocateinstituto.com" class="btn">
-        INSCRIBITE O CONSULTÁ
-      </a>
+  <input
+    type="email"
+    name="email"
+    placeholder="Correo electrónico *"
+    title="Correo electrónico inválido"
+    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+    required
+  >
+
+  <textarea
+    name="comments"
+    cols="50"
+    rows="10"
+    placeholder="Contanos en qué curso estás interesado o dejá tu consulta *"
+    required
+  ></textarea>
+
+  <div class="contact-form-loader text-center none">
+    <img src="assets/loader.svg" alt="Enviando consulta...">
+  </div>
+
+  <input class="btn" type="submit" value="ENVIAR CONSULTA">
+</form>
+
+<!-- MODAL DE CONFIRMACIÓN -->
+<article id="gracias" class="modal">
+  <div class="modal-content">
+    <article class="contact-form-response">
+      <h3>
+        ¡Gracias por contactarte con ENFÓCATE!
+        <br>
+        En breve nos comunicaremos con vos.
+      </h3>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+        <path d="M12,18c4,0,5-4,5-4H7C7,14,8,18,12,18z" />
+        <path
+          d="M12,2C6.486,2,2,6.486,2,12c0,5.514,4.486,10,10,10s10-4.486,10-10C22,6.486,17.514,2,12,2z"
+        />
+        <path
+          d="M13 12l2 .012C15.012 11.55 15.194 11 16 11s.988.55 1 1h2c0-1.206-.799-3-3-3S13 10.794 13 12zM8 11c.806 0 .988.55 1 1h2c0-1.206-.799-3-3-3s-3 1.794-3 3l2 .012C7.012 11.55 7.194 11 8 11z"
+        />
+      </svg>
+    </article>
+  </div>
+</article>
+
     </div>
   </section>
 
