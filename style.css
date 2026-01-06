@@ -234,141 +234,116 @@ a {
 }
 
 /* =====================
-   ABOUT / INSTITUTO 
+   INSTITUTO / CARDS
 ===================== */
-.about {
-  display: flex;
-  flex-direction: column; /* Cambiado a vertical para coincidir con la imagen */
-  align-items: center;
-  text-align: center; /* Centra todo el texto */
-  background: #fff;
-  padding: 4rem 2rem;
+
+.cards-2 {
+  background: #ffffff;
+  padding: 5rem 2rem;
+}
+
+.cards-2 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Bloque de texto superior */
-.about article:first-child {
-  max-width: 800px; /* Limita el ancho para mejor lectura */
-  margin-bottom: 3rem;
-}
-
-.about h1 {
-  font-size: 3.5rem;
-  color: var(--secondary-color);
-  font-weight: 900;
-  margin-bottom: 0.5rem;
-  letter-spacing: -1px;
-}
-
-.about h5 {
+/* Títulos */
+.cards-2 .section-title {
   color: var(--primary-color);
-  font-size: 1rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 2rem;
-  display: block; /* Ocupa su propia línea */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
-.about p {
-  font-size: 1.15rem;
-  color: #555;
-  line-height: 1.8;
+.cards-2 h2 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.cards-2 .section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Grid de cards */
+.cards-2 .col-lg-12 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.cards-2 .card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid #f1f1f1;
+}
+
+.cards-2 .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen */
+.cards-2 .card-image {
   margin-bottom: 1.5rem;
 }
 
-.about blockquote {
-  font-size: 1.3rem;
+.cards-2 .card-image img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* Texto */
+.cards-2 .card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--secondary-color);
-  font-weight: 700;
-  margin: 2rem 0;
-  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-/* Botón centrado */
-.about .btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: var(--primary-color);
-  color: white;
-  text-decoration: none;
-  border-radius: var(--radius);
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-/* Contenedor de la Imagen Central */
-.about article:nth-child(2) {
-  width: 100%;
-  max-width: 900px; /* Ajustado al ancho de la imagen de referencia */
-  margin: 0 auto 4rem auto;
-}
-
-.gray-scale {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  filter: none; /* Quitamos el gris por defecto para que luzca como la captura */
-  transition: transform 0.3s ease;
+.cards-2 .card-body p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
 }
 
 /* =====================
-   AREAS / ICONOS (Inferior)
+   RESPONSIVE
 ===================== */
-.about article:last-child {
-  width: 100%;
-  padding-top: 3rem;
-  border-top: 1px solid #eee; /* Línea sutil divisoria */
-}
 
-.about h2 {
-  font-size: 2rem;
-  color: var(--secondary-color);
-  margin-bottom: 3rem;
-  text-transform: uppercase;
-}
-
-.skillIconsContainer {
-  display: flex; /* Flex para centrar iconos */
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.skillIcon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100px; /* Tamaño fijo para alineación perfecta */
-  gap: 15px;
-  transition: var(--transition);
-}
-
-.skillIcon img {
-  width: 50px;
-  height: 50px;
-  opacity: 0.8;
-}
-
-.skillIcon:hover {
-  transform: translateY(-5px);
-}
-
-.skillIcon:hover img {
-  opacity: 1;
-  filter: drop-shadow(0 0 5px var(--primary-color));
-}
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
-  .about h1 { font-size: 2.5rem; }
-  .skillIconsContainer { gap: 1.5rem; }
+  .cards-2 {
+    padding: 4rem 1.5rem;
+  }
+
+  .cards-2 h2 {
+    font-size: 2rem;
+  }
+
+  .cards-2 .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .cards-2 .card {
+    padding: 2rem 1.5rem;
+  }
 }
+
 
 /* =====================
    CURSOS
