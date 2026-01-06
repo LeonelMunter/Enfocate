@@ -185,50 +185,118 @@ a {
 ===================== */
 .about {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
+  /* Definimos una estructura de 2 columnas para escritorio */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 4rem;
   align-items: center;
+  padding: 4rem 0;
 }
 
 .about h1 {
-  font-size: 2.4rem;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
   color: var(--secondary-color);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
 }
 
 .about h5 {
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
 }
 
 .about p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-color); /* Asegúrate de tener esta variable o usa #555 */
+}
+
+.about strong {
+  color: var(--secondary-color);
+  font-weight: 700;
 }
 
 .gray-scale {
+  width: 100%;
   filter: grayscale(100%);
   border-radius: var(--radius);
+  transition: var(--transition);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.gray-scale:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
 }
 
 /* =====================
-   AREAS / ICONOS
+   AREAS / ICONOS (Sección dentro de About)
 ===================== */
-.skillIconsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 1.5rem;
+.about article:last-of-type {
+  grid-column: 1 / -1; /* Hace que los iconos ocupen todo el ancho inferior */
   margin-top: 2rem;
 }
 
+.about article h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.skillIconsContainer {
+  display: grid;
+  /* Ajuste de columnas para que los iconos no se vean gigantes */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
 .skillIcon {
-  background: var(--light-color);
-  padding: 1.2rem;
+  background: var(--white-color, #fff);
+  padding: 1.5rem;
   border-radius: var(--radius);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+}
+
+.skillIcon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .skillIcon:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Cambio de color de los iconos al hacer hover (si son SVG) */
+.skillIcon:hover img {
+  filter: brightness(0) invert(1);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .skillIconsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+  }
 }
 
 /* =====================
