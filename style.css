@@ -232,6 +232,37 @@ a {
 }
 
 /* 2. CARDS DE BENEFICIOS (Flexibilidad) */
+
+.card-icon-text {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary-color); /* El color naranja/celeste de tu marca */
+    background: rgba(0, 0, 0, 0.04); /* Un fondo muy sutil */
+    padding: 20px 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    text-align: center;
+    border: 1px dashed var(--primary-color); /* Un borde sutil para darle estilo */
+    line-height: 1.2;
+}
+
+.cards-1 .col-lg-12 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards-1 .card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+}
 .cards-1 {
     padding: 80px 0;
     background: linear-gradient(to bottom, #ffffff, #f9f9f9);
@@ -243,15 +274,6 @@ a {
     gap: 30px;
 }
 
-.cards-1 .card {
-    border: none;
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: var(--radius);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
-    text-align: center;
-}
 
 .cards-1 .card:hover {
     transform: translateY(-10px);
