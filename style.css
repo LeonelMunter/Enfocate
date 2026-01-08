@@ -916,74 +916,92 @@ a {
   color: var(--text-color);
 }
 
-/* Carrusel */
+/* =====================
+   TESTIMONIOS - CARRUSEL
+===================== */
+
 .testimonials-carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(280px, 320px);
-  gap: 2rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-  animation: slide 20s infinite alternate ease-in-out;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Firefox */
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 2rem 0;
 }
 
-.testimonials-carousel::-webkit-scrollbar {
-  display: none; /* Chrome */
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: testimonials-scroll 45s linear infinite;
+}
+
+/* Pausa al pasar el mouse */
+.testimonials-carousel:hover .carousel-track {
+  animation-play-state: paused;
 }
 
 /* Card */
 .testimonial-card {
-  scroll-snap-align: center;
-  background-color: var(--light-color);
+  background: #fff;
   border-radius: var(--radius);
-  padding: 2.5rem 2rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+  min-width: 300px;
+  max-width: 320px;
   text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  transition: var(--transition);
-}
-
-.testimonial-card:hover {
-  transform: translateY(-6px);
+  flex-shrink: 0;
 }
 
 /* Imagen circular */
 .testimonial-card img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 50%;
   margin: 0 auto 1rem;
   display: block;
-  border: 3px solid var(--primary-color);
 }
 
 /* Texto */
 .testimonial-card h4 {
-  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 800;
   color: var(--secondary-color);
+  margin-bottom: 0.25rem;
 }
 
 .testimonial-card span {
-  display: block;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--primary-color);
+  display: block;
   margin-bottom: 1rem;
 }
 
 .testimonial-card p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  color: #555;
+  line-height: 1.6;
 }
 
-/* Responsive */
-@media (min-width: 768px) {
-  .testimonials-carousel {
-    grid-auto-columns: minmax(300px, 360px);
+/* Animación */
+@keyframes testimonials-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-width: 260px;
+  }
+
+  .carousel-track {
+    animation-duration: 35s;
+  }
+}
 
 /* =====================
    EQUIPO DOCENTE
