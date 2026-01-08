@@ -924,7 +924,7 @@ a {
   gap: 2rem;
   overflow-x: auto;
   padding-bottom: 1rem;
-
+  animation: slide 20s infinite alternate ease-in-out;
   scroll-snap-type: x mandatory;
   scrollbar-width: none; /* Firefox */
 }
