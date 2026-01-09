@@ -761,36 +761,49 @@ a {
 /* REDES HEXAGONO */
 .contact-socials {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem; /* Aumenté un poco el espacio para que respiren */
+  justify-content: flex-start; /* Alinea los hexágonos al inicio de su contenedor */
+  align-items: center;
 }
 
 .social-hex {
-  width: 50px; /* Ajusta según el tamaño que desees */
+  position: relative;
+  width: 50px; 
   height: 55px;
-  background-color: #d8005d; /* El color fucsia de tu imagen */
-  display: flex;
+  background-color: #d8005d; 
+  
+  /* Centrado con Flexbox */
+  display: inline-flex; /* Cambiado a inline-flex */
   align-items: center;
   justify-content: center;
   
-  /* Esto crea la forma de hexágono */
+  /* Forma de hexágono */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   
   transition: transform 0.3s ease;
   text-decoration: none;
+  
+  /* Eliminar cualquier padding que pueda heredar */
+  padding: 0;
+  margin: 0;
 }
 
 .social-hex:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+  transform: translateY(-3px) scale(1.05);
 }
 
 /* ESTILO PARA TU IMAGEN DESCARGADA */
 .social-icon {
-  width: 24px;  /* Tamaño del icono dentro del hexágono */
-  height: 24px;
+  width: 22px;  /* Tamaño sugerido para que no toque los bordes */
+  height: 22px;
   object-fit: contain;
-  /* Si tus iconos son negros y los quieres blancos, puedes usar esta línea: */
-  /* filter: brightness(0) invert(1); */
+  
+  /* Bloqueamos dimensiones para evitar desplazamientos */
+  display: block; 
+  flex-shrink: 0; 
+  
+  /* Si tus iconos son oscuros, esto los vuelve blancos */
+  filter: brightness(0) invert(1);
 }
 
 .social-hex {
