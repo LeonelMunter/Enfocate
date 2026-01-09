@@ -765,6 +765,35 @@ a {
 }
 
 .social-hex {
+  width: 50px; /* Ajusta según el tamaño que desees */
+  height: 55px;
+  background-color: #d8005d; /* El color fucsia de tu imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Esto crea la forma de hexágono */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-hex:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* ESTILO PARA TU IMAGEN DESCARGADA */
+.social-icon {
+  width: 24px;  /* Tamaño del icono dentro del hexágono */
+  height: 24px;
+  object-fit: contain;
+  /* Si tus iconos son negros y los quieres blancos, puedes usar esta línea: */
+  /* filter: brightness(0) invert(1); */
+}
+
+.social-hex {
   width: 48px;
   height: 48px;
   background-color: var(--primary-color);
