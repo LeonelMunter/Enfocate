@@ -1019,6 +1019,10 @@ a {
   gap: 2.5rem;
 }
 
+/* =====================
+   EQUIPO DOCENTE (CORREGIDO)
+===================== */
+
 .team-card {
   background-color: var(--light-color);
   border-radius: var(--radius);
@@ -1026,18 +1030,32 @@ a {
   text-align: center;
   box-shadow: 0 15px 35px rgba(0,0,0,0.08);
   transition: var(--transition);
-}
-
-.team-card:hover {
-  transform: translateY(-8px);
+  
+  /* Asegura que todo el contenido interno se alinee al centro */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .team-card img {
   width: 120px;
   height: 120px;
-  object-fit: cover;
+  object-fit: contain; /* Cambiado de cover a contain para que el icono no se corte */
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  
+  /* Esto garantiza el centrado horizontal si el flex falla */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Opcional: si el icono se ve muy gris, puedes darle un toque de color */
+  background-color: #f0f0f0; 
+  padding: 10px; /* Crea un aire alrededor del icono antes del borde de la card */
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
 }
 
 .team-card h3 {
